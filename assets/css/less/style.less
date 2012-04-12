@@ -1,0 +1,56 @@
+/**********  Imports  **********/
+@import "mixins.less";
+@import "reset.less";
+@import "type.less";
+@import "grid.less";
+@import "sprites.less";
+
+/********** Variables  **********/
+@basefontsize: 14px;
+@basefontfamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@baselineheight: 1;
+
+@bodybackground: #fff;
+
+@textcolor: #222;
+
+@linkcolor: #369;
+@linkcolorhover: darken(@linkcolor, 15%);
+
+@imgpath: "assets/img/site/";
+// usage: background:url("@{imgpath}img.jpg");
+
+
+/**********  Base  **********/
+body {
+  color: @textcolor;
+  background-color: @bodybackground;
+}
+
+a {
+  color: @linkcolor;
+  text-decoration: none;
+}
+a:hover {
+  color: @linkcolorhover;
+  text-decoration: underline;
+}
+
+
+/**********  Layout  **********/
+
+
+
+/**********  Modules  **********/
+
+
+
+/**********  States  **********/
+
+
+/**********  Imports  **********/
+
+
+
+@import "media-queries.less";
+@import "print.less";
