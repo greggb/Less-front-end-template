@@ -33,12 +33,15 @@
     box-shadow: @depth;
 }
 
-.opacity(@value: .5) {
-    opacity: @value;
-    filter: ~'alpha(opacity=(@value*100))'; 
-    filter: ~'progid:DXImageTransform.Microsoft.Alpha(opacity=(@value*100))'; 
-    -ms-filter: ~'"progid:DXImageTransform.Microsoft.Alpha(opacity=(@value*100))"'; 
-  }
+.opacity(@opacity:.5) {
+   @target-ie: @opacity * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{target-ie})";
+	filter: alpha(opacity=@target-ie);
+	-webkit-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-moz-opacity: @opacity;
+	opacity: @opacity;
+}
 
   .background-gradient(@colourfrom: #bbb, @colourTo: #f1f1f1, @fallbackColour: #f1f1f1, @fallbackImageUrl: '') {
     background-color: @fallbackColour;
